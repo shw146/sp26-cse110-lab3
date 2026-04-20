@@ -1,0 +1,75 @@
+/* header class used to label all headers with general styling */
+.header{
+
+}
+
+/* Towards the bottom there is a coding language radio entry that this will 
+stylize  */
+#HTML/CSS{
+
+}
+
+/* This is the universal selector and will apply stylizing to all elements but 
+can be overwritten for specific stylizing */
+*{
+
+}
+
+/* This element selector will change all instances of itself */
+input{
+
+}
+
+/* This attribute selector changes all instances of links (a) that end ($=) in
+.html */
+a[href$=".html"]{
+
+}
+
+/* This pseudo class selector will find all input instances and change them when
+the mouse is hovering over them */
+/* Note that this uses the listing feature that allows us to change both the 
+input and the button in the same way */
+input:hover, button:hover{
+
+}
+
+/* This uses a descendant combinator to specify any spans inside of sections */
+section span{
+
+}
+
+/* This uses a child combinator to specify paragraphs that are specifically 
+one generation (or tab) down from a section */
+section p{
+
+}
+
+/* This subsequent sibling combinator selects all emphasis that are siblings 
+with a div, ignoring separations between them */
+div~em{
+
+}
+
+/* This next sibling combinator does something similar, but the two elements 
+must be directly next to each other */
+ul + ol{
+
+}
+
+/* This specifies details sections that specifically have the class "video" */
+details.video{
+    
+}
+
+/* This applies stylizing to footers with a form right after it */
+footer:has(+ form){
+
+}
+
+/* This is a nested selector that I need to make HTML for to implement  */
+.explanation{
+    & > a{
+
+    }
+}
