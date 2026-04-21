@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        hr{margin-left: 0; margin-right:0;height: 1px;;background-color:black;}
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Mock MM</title>
+    <meta name="author" content = "Shawn Wang">
+    <link rel="icon" href="/resources/favicon.ico" type="image/x-icon">
+
+    <link rel = "stylesheet" href = "stylizing files/stylesheet.css">
+  </head>
+  <body>
+    <main>
+        <header class = "header">
+            <h1 style = "text-decoration:underline">
+                Mock Meeting Minutes (this is header 1)
+            </h1>
+
+            <h2 >
+                In the future this will be for team #25 (header 2)
+            </h2>
+
+            <h3 >
+                Here we should keep who is present and who is absent: (header 3)
+            </h3>
+        </header>
+
+        <section id = "section">
+            <p>
+            This is the beginning of a section. It currently does nothing because there's no CSS
+            to give it any structure.
+            </p>
+
+            <div>
+                We've defined a division here. It also doesn't do anything 
+                without CSS<br>
+                <h3>
+                    This is what a header 3 in a division looks like. <br>
+                    Here let's put where the meeting was held and when it was held.
+                </h3>
+                <span>
+                    This is inside of a span, it doesn't do anything atm
+                </span>
+            </div>
+            
+            <hr> I just declared an hr starting here and will close it off
+            <hr>
+
+            <p>
+                This is text inside of a paragraph, could be useful for longer
+                text that we need to keep as details for meeting topics. Notice
+                how it forces a bit of spacing with the things around it.
+            </p>
+
+            <ul>
+                <li>This text should be part of an unordered list. </li>
+                <li>This is also part of the list </li>
+                <li>1 </li>
+                <li>2 </li>
+                <li>3 </li>
+                <li>This is important for listing off items that we need to 
+                    finish but have no legitimate order to them </li>
+            </ul>
+
+            <ol>
+                <li>This text is part of an ordered list</li>
+                <li>Let's use this for stuff that need to be ranked in terms
+                    of importance </li>
+            </ol>
+            
+            <b>This is a list of navigation links (this should also be bold):</b>
+            <nav>
+                <a href = "subpage.html"> subpage</a>
+            </nav>
+
+            <strong> 
+                For comparison this is what something looks like when it's
+                strong. Importantly, this changes how a screen reader interacts
+                with this text despite it looking like the text is just bolded
+            </strong>
+            <br>
+
+            <i>
+                On the contrary, this is some italicized text. Remember to use
+                br for line breaks
+            </i> 
+            <br>
+            
+            <em>
+                But along the same line, this emphasized text is also used for 
+                screen readers to interact with
+            </em>
+            <br>
+
+            <a href = "https://www.w3schools.com/tags/tag_a.asp"> 
+                link to w3 schools "a" syntax
+            </a>
+            <br>
+
+            let's go ahead and add spongebob here for fun:
+            <br> 
+
+            <img src = "resources/spongebob.jfif" alt = "spongebob smiling" width = "200" height = "200">
+            <br>
+
+            <b> 
+                Remember that we need to be adding alt text in case of screen
+                readers or the image not rendering properly!
+            </b>
+            <br>
+            <br>
+            
+            Below should be a play button that will play an audio of a pipe
+            dropping. Idk why I find this funny my humor is broken
+            <br>
+
+            <audio controls>
+                <source src = "resources/pipe.mp3" type = "audio/mpeg">
+            </audio>
+            <br>
+            <br>
+            
+            <details class="video">
+                <summary> Video details </summary>
+                This is a video that I made that unforunately got copyright struck
+                on youtube so instead its gonna be here:
+            </details>
+            <video controls width = "320" height = "200">
+                <source src = "resources/Short.mp4" type = "video/mp4">
+                If a browser doesn't support the video element, then it will
+                display this text.
+            </video>
+
+        </section>
+
+        <hr>
+
+        <footer>
+
+            <form>
+                <fieldset>
+                    <label for="fname"> First Name: </label>
+                    <input type="text" id = "fname" name = "fname">
+                    <br> 
+                    <br>
+
+                    <i>Which coding language do you like the best?</i>
+                    <br>
+                        <input type = "radio" id = "HTML-CSS" name = "favorite language"
+                        value = "HTML/CSS">
+                        <label> HTML/CSS </label>
+                        <input type = "radio" id = "Java" name = "favorite language"
+                        value = "Java">
+                        <label> Java </label>
+                        <input type = "radio" id = "Python" name = "favorite language"
+                        value = "Python">
+                        <label> Python </label>
+                    <br>
+
+                    <textarea id="stext" name ="text" rows ="5" cols ="200">
+                        This is a text area. 
+                        This can be used to take in string format inputs.
+                        Normally if I were to hit enter it wouldn't register as a new line and I'd have to use br to force a line break, but here all of my inputs count.
+                        It's also important to note that this also registers all of my tab usage, so it has to be reset back to the base spacing for things to look right.
+                    </textarea>
+                    <br>
+
+                    <label> Choose a number from the list below: </label>
+                    <input list = "numbers" name = "number" id = "number">
+                        <datalist id = "numbers">
+                            <option value = "1">
+                            <option value = "2">
+                            <option value = "3">
+                        </datalist>
+                    <input type = "submit">
+                    <br>
+
+                    <b>Whereas the datalist allows for extra inputs other than what
+                    we want the user to be able to choose, the select function
+                    forces the choice of some number of predetermined options.</b>
+                    <br>
+
+                    <label for = "letters"> Choose a letter: </label>
+                        <select name = "letters" id = "letters">
+                            <option value = "a"> A </option>
+                            <option value = "b"> B </option>
+                            <option value = "c"> C </option>
+                        </select>
+                        <input type = "submit">
+                    <br>
+
+                    This is just a clickable button that doesn't do anything:
+                    <button type = "button"> BUTTON </button>
+                </fieldset>
+            </form>
+
+        </footer>
+    </main>
+  </body>
+</html> 
