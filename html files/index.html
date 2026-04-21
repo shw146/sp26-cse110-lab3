@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+        hr{margin-left: 0; margin-right:0;height: 1px;;background-color:black;}
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+
     <title>Mock MM</title>
     <meta name="author" content = "Shawn Wang">
-    <link rel="icon" href="Resources/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/resources/favicon.ico" type="image/x-icon">
+
+    <link rel = "stylesheet" href = "/stylizing files/stylesheet.css">
   </head>
   <body>
     <main>
-        <header>
-            <h1>
+        <header class = "header">
+            <h1 style = "text-decoration:underline">
                 Mock Meeting Minutes (this is header 1)
             </h1>
 
-            <h2>
+            <h2 >
                 In the future this will be for team #25 (header 2)
             </h2>
 
-            <h3>
+            <h3 >
                 Here we should keep who is present and who is absent: (header 3)
             </h3>
         </header>
 
-        <section>
+        <section id = "section">
+            <p>
             This is the beginning of a section. It currently does nothing because there's no CSS
             to give it any structure.
-            <br>
+            </p>
 
             <div>
                 We've defined a division here. It also doesn't do anything 
@@ -53,7 +64,7 @@
                 <li>1 </li>
                 <li>2 </li>
                 <li>3 </li>
-                <li>This is important for listing off items that weneed to 
+                <li>This is important for listing off items that we need to 
                     finish but have no legitimate order to them </li>
             </ul>
 
@@ -62,9 +73,10 @@
                 <li>Let's use this for stuff that need to be ranked in terms
                     of importance </li>
             </ol>
-            <nav>
+            
             <b>This is a list of navigation links (this should also be bold):</b>
-            <a href = "subpage.html"> subpage</a>
+            <nav>
+                <a href = "subpage.html"> subpage</a>
             </nav>
 
             <strong> 
@@ -94,7 +106,7 @@
             let's go ahead and add spongebob here for fun:
             <br> 
 
-            <img src = "Resources/spongebob.jfif" alt = "spongebob smiling" width = "200" height = "200">
+            <img src = "/resources/spongebob.jfif" alt = "spongebob smiling" width = "200" height = "200">
             <br>
 
             <b> 
@@ -109,18 +121,18 @@
             <br>
 
             <audio controls>
-                <source src = "Resources/pipe.mp3" type = "audio/mpeg">
+                <source src = "/resources/pipe.mp3" type = "audio/mpeg">
             </audio>
             <br>
             <br>
             
-            <details>
+            <details class="video">
                 <summary> Video details </summary>
                 This is a video that I made that unforunately got copyright struck
                 on youtube so instead its gonna be here:
             </details>
             <video controls width = "320" height = "200">
-                <source src = "Resources/Short.mp4" type = "video/mp4">
+                <source src = "/resources/Short.mp4" type = "video/mp4">
                 If a browser doesn't support the video element, then it will
                 display this text.
             </video>
@@ -140,20 +152,15 @@
 
                     <i>Which coding language do you like the best?</i>
                     <br>
-
-                    <input type = "radio" id = "HTML/CSS" name = "favorite language"
-                    value = "HTML/CSS">
-                    <label for = "HTML/CSS"> HTML/CSS </label>
-                    <br>
-
-                    <input type = "radio" id = "Java" name = "favorite language"
-                    value = "Java">
-                    <label for = "Java"> Java </label>
-                    <br>
-
-                    <input type = "radio" id = "Python" name = "favorite language"
-                    value = "Python">
-                    <label for = "Python"> Python </label>
+                        <input type = "radio" id = "HTML-CSS" name = "favorite language"
+                        value = "HTML/CSS">
+                        <label> HTML/CSS </label>
+                        <input type = "radio" id = "Java" name = "favorite language"
+                        value = "Java">
+                        <label> Java </label>
+                        <input type = "radio" id = "Python" name = "favorite language"
+                        value = "Python">
+                        <label> Python </label>
                     <br>
 
                     <textarea id="stext" name ="text" rows ="5" cols ="200">

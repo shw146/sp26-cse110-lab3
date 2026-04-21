@@ -1,75 +1,171 @@
-/* header class used to label all headers with general styling */
-.header{
+:root{
+    color: black;
 
-}
+    --base-color: rgb(253, 223, 255);
+    --header-color: #F3A7FA;
+    --header-font-size: 1rem;
+    --footer-color: color(display-p3 0.28 0 0.83 / 0.35);
 
-/* Towards the bottom there is a coding language radio entry that this will 
-stylize  */
-#HTML/CSS{
-
+    --alternate-color: #abf593;
 }
 
 /* This is the universal selector and will apply stylizing to all elements but 
 can be overwritten for specific stylizing */
-*{
+* {
+    font-family:"Bitcount Grid Double", system-ui;
+    font-size: 1.5rem;
+}
 
+body{
+    background: var(--base-color);
+}
+/* header class used to label all headers with general styling */
+.header{
+    /* We are referencing the header-color variable, but if it doesn't exist,
+    we replace it with red instead */
+    background-color: var(--header-color, red);
+
+    /* box model */
+    width: 90vw;
+
+    border-width: 1.5mm;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+
+    padding: 1cm 2px 40px 2px;
+    margin: 5vmin auto;
+
+    /* Position editing */
+    position: relative; 
+
+    /* text formatting properties */
+    text-align: center; 
+    text-justify: auto;
+    color: black;
+}
+
+footer{
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+    
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    
+    background-color: var(--footer-color);
+}
+
+#section{
+    margin: 20px 20px 20px 20px;
+
+    background-color: color-mix(in oklab, hsla(60, 100%, 97.059%, 0.486 ), color(display-p3 0.75 0.69 0.83 / 0.78));
+    padding: 3em;
+
+    text-align: center;
+
+    display: grid;
+    
+    & a[href$=".asp"]{
+        color: green;
+    }
+}
+
+#number,#fname{
+    background-color: white;
 }
 
 /* This element selector will change all instances of itself */
 input{
+    color: white;
+    background-color: green;
+    display: flex;
+}
 
+input[type="radio"]{
+    border: 0px;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+fieldset{
+    display: inline;
 }
 
 /* This attribute selector changes all instances of links (a) that end ($=) in
 .html */
 a[href$=".html"]{
-
+    color: red;
 }
 
 /* This pseudo class selector will find all input instances and change them when
 the mouse is hovering over them */
 /* Note that this uses the listing feature that allows us to change both the 
 input and the button in the same way */
-input:hover, button:hover{
+input:hover, button:active{
+    background-color: powderblue;
+}
 
+@media(hover: hover){
+    input:hover{
+        background-color: black;
+    }
 }
 
 /* This uses a descendant combinator to specify any spans inside of sections */
 section span{
-
+    position: static;
 }
 
 /* This uses a child combinator to specify paragraphs that are specifically 
 one generation (or tab) down from a section */
 section p{
+    display: flex;
+}
 
+ul, ol{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   
+}
+
+li{
+    flex-grow:4;
+}
+
+fieldset{
+    display: grid;
+    grid-template-rows: 200px 1fr 2fr;
+    justify-items: center;
+    grid-auto-flow: row;
+}
+
+textarea{
+    width: 100%;
+    height: 100%;
 }
 
 /* This subsequent sibling combinator selects all emphasis that are siblings 
 with a div, ignoring separations between them */
 div~em{
-
+    background-color: rgb(118, 132, 255);
 }
 
 /* This next sibling combinator does something similar, but the two elements 
 must be directly next to each other */
 ul + ol{
-
+    background-color: pink;
 }
 
 /* This specifies details sections that specifically have the class "video" */
 details.video{
-    
+    background-color: purple;
 }
 
 /* This applies stylizing to footers with a form right after it */
-footer:has(+ form){
-
-}
-
-/* This is a nested selector that I need to make HTML for to implement  */
-.explanation{
-    & > a{
-
-    }
+label:has(+ input){
+    background-color: rgb(255, 255, 200);
 }
